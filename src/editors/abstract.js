@@ -1,4 +1,4 @@
-import { isPureObject } from 'hyperforms/core/tools';
+import { isPureObject } from 'futilsjs';
 
 export default class AbstractEditor {
   constructor(form, schema, path) {

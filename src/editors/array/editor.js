@@ -1,6 +1,6 @@
 /* eslint-disable radix */
-import { isPureObject } from 'hyperforms/core/tools';
-import AbstractEditor from 'hyperforms/editors/abstract.js';
+import { isPureObject } from 'futilsjs';
+import AbstractEditor from 'aformjs/editors/abstract.js';
 
 export default class ArrayEditor extends AbstractEditor {
   static matchSchema(schema) {

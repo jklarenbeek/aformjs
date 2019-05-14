@@ -9,7 +9,7 @@ import {
   colorModifier,
   styleModifier,
   sizeModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 
 import { MultiList } from './MultiList';
 

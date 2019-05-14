@@ -9,7 +9,7 @@ import {
   parseStyleModifier,
   parseSizeModifier,
   inputModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 import { Control } from './_Control';
 
 const configInputArea = {

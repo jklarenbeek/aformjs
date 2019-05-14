@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from 'futilsjs';
-import { Control } from 'hyperforms/core/components';
+import { Control } from 'aformjs/core/components';
 
 import StringEditor from '../editor';
 import InputString from './InputString';

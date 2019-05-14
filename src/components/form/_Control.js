@@ -4,8 +4,8 @@
 /* @jsx h */
 import { h, h as render } from 'futilsjs';
 
-import { parseSizeModifier, alignModifier, stateModifier } from 'hyperforms/components/modifiers';
-import { IconBox, Icon } from 'hyperforms/components/elements/Icon';
+import { parseSizeModifier, alignModifier, stateModifier } from 'aformjs/components/modifiers';
+import { IconBox, Icon } from 'aformjs/components/elements/Icon';
 import { sizeModifier } from '../modifiers';
 
 /**

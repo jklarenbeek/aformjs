@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from 'futilsjs';
-import { Field, Control } from 'hyperforms/core/components';
+import { Field, Control } from 'aformjs/core/components';
 
 import NumberEditor from '../editor';
 import InputNumber from './InputNumber';

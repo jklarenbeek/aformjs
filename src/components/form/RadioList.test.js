@@ -10,7 +10,7 @@ import {
   colorModifier,
   styleModifier,
   sizeModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 
 import { RadioList } from './RadioList';
 import { CheckList } from './CheckList';

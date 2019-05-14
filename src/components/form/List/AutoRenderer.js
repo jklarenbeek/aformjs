@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import { getFirstObjectItem } from 'hyperforms/components/tools';
+import { getFirstObjectItem } from 'futils';
 
 import RenderArray from './RenderArray';
 import RenderTuple from './RenderTuple';

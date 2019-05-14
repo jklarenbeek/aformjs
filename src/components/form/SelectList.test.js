@@ -10,7 +10,7 @@ import {
   colorModifier,
   styleModifier,
   sizeModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 
 import { SelectList } from './SelectList';
 import { Field } from './Field';

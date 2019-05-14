@@ -1,13 +1,13 @@
 /** @jsx h */
 import {
   colorModifierValidate,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 
 import EnumEditor from '../editor';
 
 // import {
 //   SelectElement,
-// } from 'hyperforms/components/SelectElement';
+// } from 'aformjs/components/SelectElement';
 
 export default class SelectControl extends EnumEditor {
   render() {

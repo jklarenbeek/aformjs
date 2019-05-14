@@ -12,7 +12,7 @@ import {
   parseStateModifier,
   displayModifier,
   inputModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 import { Control } from './_Control.js';
 import { stateModifier } from '../modifiers.js';
 

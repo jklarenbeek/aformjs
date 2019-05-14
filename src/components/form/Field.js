@@ -4,7 +4,7 @@
 /* @jsx h */
 import { h } from 'futilsjs';
 
-import { sizeModifier } from 'hyperforms/components/modifiers';
+import { sizeModifier } from 'aformjs/components/modifiers';
 
 export const fieldModifier = {
   hasAddOns: 'has-addons',

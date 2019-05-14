@@ -13,7 +13,7 @@ import {
   parseStyleModifier,
   stateModifier,
   displayModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 
 import { DataList, OptionRequired } from './DataList';
 import { Control } from './_Control';

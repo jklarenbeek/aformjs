@@ -6,14 +6,14 @@
 /* @jsx h */
 import { h } from 'futilsjs';
 
-import { random } from 'hyperforms/core/tools';
+import { random } from 'futilsjs';
 
 import {
   parseColorModifier,
   parseSizeModifier,
   parseStyleModifier,
   displayModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 
 import { Control } from '../_Control';
 import AutoRenderer from './AutoRenderer';

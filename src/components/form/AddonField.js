@@ -11,7 +11,7 @@ import {
   parseDisplayModifier,
   parseStyleModifier,
   parseStateModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 import { Control } from './_Control';
 import { Field } from './Field';
 

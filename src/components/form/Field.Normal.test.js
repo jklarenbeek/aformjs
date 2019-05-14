@@ -7,9 +7,9 @@ import { h } from 'futilsjs';
 import {
   colorModifier,
   stateModifier,
-} from 'hyperforms/components/modifiers';
+} from 'aformjs/components/modifiers';
 
-import { Icon } from 'hyperforms/components/elements/Icon';
+import { Icon } from 'aformjs/components/elements/Icon';
 
 
 import { NormalField } from './Field';

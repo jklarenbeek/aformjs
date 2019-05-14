@@ -1,4 +1,4 @@
-import AbstractEditor from 'hyperforms/editors/abstract.js';
+import AbstractEditor from 'aformjs/editors/abstract.js';
 import { parseEnumArray } from './tools';
 
 export default class EnumEditor extends AbstractEditor {

@@ -1,5 +1,5 @@
 /* eslint-disable radix */
-import AbstractEditor from 'hyperforms/editors/abstract.js';
+import AbstractEditor from 'aformjs/editors/abstract.js';
 import { getNumberFormatType } from './default/index';
 
 export default class NumberEditor extends AbstractEditor {

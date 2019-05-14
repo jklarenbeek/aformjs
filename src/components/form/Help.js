@@ -1,7 +1,7 @@
 /* @jsx h */
 import { h } from 'futilsjs';
 
-import { colorModifier } from 'hyperforms/components/modifiers';
+import { colorModifier } from 'aformjs/components/modifiers';
 
 export const configHelp = { helpClass: 'help' };
 

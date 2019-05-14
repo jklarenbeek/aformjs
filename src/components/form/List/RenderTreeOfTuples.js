@@ -3,7 +3,7 @@
 /* @jsx h */
 import { h } from 'futilsjs';
 
-import { Message } from 'hyperforms/bulma-default';
+import { Message } from 'aformjs/bulma-default';
 import { ListControl } from './index';
 
 /**

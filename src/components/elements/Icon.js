@@ -10,7 +10,7 @@
 
 
 import { h } from 'futilsjs';
-import { collapseToString, collapseCssClass, removeCssClass } from 'hyperforms/core/tools';
+import { collapseToString, collapseCssClass, removeCssClass } from 'futilsjs';
 
 import { parseModifier, helperModifier, parseAlignModifier, parseSizeModifier, textModifier, parseTextModifier } from '../modifiers';
 
