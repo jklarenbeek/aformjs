@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import { getFirstObjectItem } from 'futils';
+import { getFirstObjectItem } from 'futilsjs';
 
 import RenderArray from './RenderArray';
 import RenderTuple from './RenderTuple';

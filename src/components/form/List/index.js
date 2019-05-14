@@ -4,9 +4,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable object-curly-newline */
 /* @jsx h */
-import { h } from 'futilsjs';
-
-import { random } from 'futilsjs';
+import { h, int_random } from 'futilsjs';
 
 import {
   parseColorModifier,
@@ -232,7 +230,7 @@ export function ListControl(
     config = configListControl }) {
 
   const RenderOptions = config.renderer;
-  const name = $name || Symbol(random()).toString();
+  const name = $name || Symbol(int_random()).toString();
 
   return (<ListControlEx
       $id={ $id }
