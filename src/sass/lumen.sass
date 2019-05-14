@@ -1,0 +1,40 @@
+@charset "utf-8"
+
+@import 'lumen/_introspection'
+@import 'lumen/_harmony'
+@import 'lumen-basic'
+@import 'bulmacore/utilities/functions'
+
+// Enviromental Colors
+$ambient-color: $white-ter // either black or white
+
+@function _gamma($channel)
+  @if $channel < 0.03928
+    @return $channel / 12.92
+  @else
+    $c: ($channel + 0.055) / 1.055
+    @if function-exists("pow")
+      @return pow($c, 2.4)
+    @else
+      @return 0.56 * $c * $c * $c + 0.44 * $c * $c
+
+@function get-text-color($color)
+  @return findColorInvert($color)
+  // http://dannyruchtie.com/color-contrast-calculator-with-yiq/
+  // https://medium.com/@MikeKellyWeb/calculating-color-contrast-with-sass-eff39ef23f96
+  $s: $color
+  $r: red($s)
+  $g: green($s)
+  $b: blue($s)
+  $yiq: (($r*299) + ($g*587) + ($b*114))/1000
+  @if ($yiq >= 128)
+    @return darken($color, 75%)
+  @else
+    @return lighten($color, 75%)
+
+@function get-inverted-color($color)
+  // @return desaturate(darken(complement($color), 9%), 10%)
+  @return complement($color)
+
+@function get-inverted-text-color($color)
+  @return get-text-color(get-inverted-color($color))

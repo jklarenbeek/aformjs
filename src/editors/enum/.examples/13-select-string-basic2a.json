@@ -1,0 +1,22 @@
+{
+  "$id": "select-string-basic2a",
+  "type": "string",
+  "title": "Available currencies",
+  "enum": {
+    "₿": "Bitcoin (&#8383;)",
+    "$": "Dollar (&dollar;)",
+    "£": "Pound (&pound;)",
+    "€": "Euro (&euro;)",
+    "¥": "Yen (&yen;)",
+    "₹": "Rupee (&#8377;)"
+  },
+  "required": true,
+  "layout": {
+    "leftIcon": "envelope",
+    "rightIcon": "check",
+    "placeholder": "Make a choice here..."
+  },
+  "errors": {
+    "required": "You MUST choose."
+  }
+}

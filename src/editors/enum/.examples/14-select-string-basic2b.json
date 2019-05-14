@@ -1,0 +1,26 @@
+{
+  "$id": "select-string-basic2b",
+  "type": "string",
+  "title": "Available currencies",
+  "description": "the template variables used are $value and $title respectively",
+  "enum": {
+    "₿": "Bitcoin (&#8383;)",
+    "$": "Dollar (&dollar;)",
+    "£": "Pound (&pound;)",
+    "€": "Euro (&euro;)",
+    "¥": "Yen (&yen;)",
+    "₹": "Rupee (&#8377;)"
+  },
+  "required": true,
+  "options": {
+    "template": "$value - $title"
+  },
+  "layout": {
+    "leftIcon": "envelope",
+    "rightIcon": "check",
+    "placeholder": "Make a choice here..."
+  },
+  "errors": {
+    "required": "You MUST choose."
+  }
+}

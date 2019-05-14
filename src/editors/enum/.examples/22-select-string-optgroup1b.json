@@ -1,0 +1,36 @@
+{
+  "$id": "select-simple-optgroup1b",
+  "type": "string",
+  "format": "color",
+  "title": "A whole lot of color to it.",
+  "description": "All enum structures of these examples are rendered to this base stucture internaly.",
+  "enum": [
+    [ "Redish colors",
+      [
+        { "value": "#FF0000", "title": "Red" },
+        { "value": "#8B0000", "title": "Dark Red" },
+        { "value": "#EE9090", "title": "Light Red" }
+      ]
+    ],
+    [ "Greenish colors",
+      [
+        { "value": "#00FF00", "title": "Green" },
+        { "value": "#006400", "title": "Dark Green" },
+        { "value": "#90EE90", "title": "Light Green", "disabled": true }
+      ]
+    ],
+    [ "Blue'ish colors",
+      [
+        { "value": "#0000FF", "title": "Blue" },
+        { "value": "#00008B", "title": "Dark Blue" },
+        { "value": "#ADD8E6", "title": "Light Blue" }
+      ]
+    ]
+  ],
+  "default": "#00FF00",
+  "nullable": false,
+  "required": false,
+  "options": {
+    "placeholder": "You CAN choose a color here."
+  }
+}

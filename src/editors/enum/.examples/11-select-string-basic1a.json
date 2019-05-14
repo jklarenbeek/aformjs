@@ -1,0 +1,9 @@
+{
+  "$id": "select-string-basic1a",
+  "type": "string",
+  "title": "Available currencies",
+  "description": "Perhaps the simplest of enums.",
+  "enum": [ "₿", "$", "£", "€", "¥", "₹"],
+  "required": true,
+  "default": "₿"
+}

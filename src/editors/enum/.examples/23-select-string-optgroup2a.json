@@ -1,0 +1,27 @@
+{
+  "$id": "select-simple-optgroup2",
+  "type": "string",
+  "format": "color",
+  "title": "A whole lot of color to it.",
+  "description": "A simple select with groupby object member selector.",
+  "enum": [
+    { "value": "#FF0000", "title": "Red", "group": "red" },
+    { "value": "#8B0000", "title": "Dark Red", "group": "red" },
+    { "value": "#EE9090", "title": "Light Red", "group": "red" },
+    { "value": "#00FF00", "title": "Green", "group": "green" },
+    { "value": "#006400", "title": "Dark Green", "group": "green" },
+    { "value": "#90EE90", "title": "Light Green", "group": "green" },
+    { "value": "#0000FF", "title": "Blue", "group": "blue" },
+    { "value": "#00008B", "title": "Dark Blue", "group": "blue" },
+    { "value": "#ADD8E6", "title": "Light Blue", "group": "blue" }
+  ],
+  "default": "#0000FF",
+  "options": {
+    "group": {
+      "red": "Redish colors",
+      "green": "Greenish colors",
+      "blue":"Blue'ish colors"
+    },
+    "placeholder": "You MUST choose a color."
+  }
+}

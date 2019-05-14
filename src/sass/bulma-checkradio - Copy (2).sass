@@ -1,0 +1,557 @@
+
+$checkradio-default-color: transparent !default
+$checkradio-default-hover: transparent !default
+$checkradio-default-border-color: $grey-lighter !default
+$checkradio-default-border-hover: $grey-light !default
+$checkradio-default-bulet-color: $grey-light !default
+$checkradio-default-bulet-hover: $grey !default
+
+$checkradio-default-top-offset: auto
+$checkradio-default-border-radius: $radius !default
+
+$checkradio-default-border: .1rem solid $checkradio-default-border-color !default
+
+$checkradio-solid-color: $grey-lighter !default
+$checkradio-solid-hover: $grey-light !default
+$checkradio-solid-border-color: transparent !default
+$checkradio-solid-border-hover: $grey-light !default
+$checkradio-solid-bulet-color: $white-ter !default
+$checkradio-solid-bulet-hover: $white-bis !default
+$checkradio-solid-background: $checkradio-default-border-color !default
+
+$checkradio-block-back-color: $white-ter !default
+
+// #region basic styling
+.is-checkradio[type="radio"],
+.is-checkradio[type="checkbox"]
+  user-select: none
+  display: inline-block
+  position: absolute
+  opacity: 0
+
+  + .button
+    padding-left: 2rem
+    &::before,
+    &:before
+      position: absolute
+      left: 0
+      top: auto
+      content: ''
+
+    &::after,
+    &:after
+      position: absolute
+      content: ''
+      top: auto
+
+.is-checkradio[type="radio"]
+  + .button
+    &::before,
+    &:before
+      border-radius: 50%
+    &::after,
+    &:after
+      border-radius: 50%
+      left: 0
+      transform: scale(0.5)
+
+.is-checkradio[type="checkbox"]
+  + .button
+    &::before,
+    &:before
+      border-radius: $input-radius
+
+    &::after,
+    &:after
+      box-sizing: border-box
+      transform: rotate(45deg)
+      border-width: .1rem
+      border-style: solid
+      border-color: $primary
+      border-top: 0
+      border-left: 0
+
+.is-checkradio[type="radio"],
+.is-checkradio[type="checkbox"]
+  user-select: none
+  display: inline-block
+  position: absolute
+  opacity: 0
+
+  + label,
+    &:first-of-type
+      // margin-left: 0
+  + .label
+    &:first-child
+      // margin-left: 0
+
+  + label,
+  + .label
+    position: relative
+    display: initial
+    cursor: pointer
+    vertical-align: middle
+    margin: .5em
+    padding: .2rem .5rem .2rem 0
+    border-radius: $input-radius
+    white-space: nowrap
+    &::before,
+    &:before
+      position: absolute
+      left: 0
+      top: $checkradio-default-top-offset
+      content: ''
+
+    &::after,
+    &:after
+      position: absolute
+      content: ''
+      top: $checkradio-default-top-offset
+
+  &:checked
+    &[disabled]
+      cursor: not-allowed
+      + label,
+      + .label
+        opacity: 0.5
+    + label,
+    + .label
+      &::before,
+      &:before
+        animation-name: none
+
+  &[disabled]
+    cursor: not-allowed
+    + label,
+    + .label
+      opacity: 0.5
+      cursor: not-allowed
+      &:hover,
+      &:before,
+      &::before,
+      &::after,
+      &:after
+        cursor: not-allowed
+
+    &:hover
+      cursor: not-allowed
+      &::before,
+      &:before
+        animation-name: none
+
+    &::before,
+    &:before
+      cursor: not-allowed
+
+    &::after,
+    &:after
+      cursor: not-allowed
+// #endregion
+
+// #region RTL, JUSTIFY, CENTER, LEFT, RIGHT
+.is-checkradio[type="radio"],
+.is-checkradio[type="checkbox"]
+  &.is-rtl
+    + label,
+    + .label
+      margin-right: 0rem
+      margin-left: 0rem
+      padding-left: 0
+      &::before,
+      &:before
+        left: auto
+        right: 0
+  &.is-right
+    + label,
+    + .label
+      text-align: right
+  &.is-center
+    + label,
+    + .label
+      text-align: left
+  &.is-left
+    + label,
+    + .label
+      text-align: center
+  &.is-justify
+    + label,
+    + .label
+      text-align: justify
+// #endregion
+
+
+// #region BULLET STYLES
+.is-checkradio[type="radio"]
+  + label,
+  + .label,
+  + .button
+    &::before,
+    &:before
+      border-radius: 50%
+    &::after,
+    &:after
+      border-radius: 50%
+      left: 0
+      transform: scale(0.5)
+
+.is-checkradio[type="checkbox"]
+  + label,
+  + .label
+  + .button
+    &::before,
+    &:before
+      border-radius: $input-radius
+
+    &::after,
+    &:after
+      box-sizing: border-box
+      transform: rotate(45deg)
+      border-width: .1rem
+      border-style: solid
+      border-color: $primary
+      border-top: 0
+      border-left: 0
+
+// #endregion
+
+// #region COLOR radio and checkbox inputs
+.is-checkradio[type="radio"],
+.is-checkradio[type="checkbox"]
+  + label,
+  + .label
+    &::before,
+    &:before
+      border: .1rem solid $grey-lighter
+    &::after,
+    &:after
+      display: none
+      background-color: $grey-light
+  &:hover:not([disabled])
+    + label,
+    + .label
+      &::before,
+      &:before
+        border-color: darken($grey-lighter, 7%) !important
+      &::after,
+      &:after
+        background-color: darken($grey-light, 7%) !important
+  &:checked
+    + label,
+    + .label
+      &::before,
+      &:before
+        border: $checkradio-default-border
+      &::after,
+      &:after
+        display: inline-block
+
+
+.is-checkradio[type="radio"]
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      &:hover:not([disabled])
+        + label,
+        + .label
+          &::before,
+          &:before
+            border-color: $color !important
+      &:checked
+        + label,
+        + .label
+          &::after,
+          &:after
+            border-color: $color !important
+            background-color: $color !important
+
+.is-checkradio[type="checkbox"]
+  &:indeterminate
+    + label,
+    + .label
+      &::after,
+      &:after
+        display: inline-block
+        transform: rotate(90deg)
+        border-bottom: none
+    @each $name, $pair in $colors
+      $color: nth($pair, 1)
+      $color-invert: nth($pair, 2)
+      &.is-#{$name}
+        + label,
+        + .label
+          &::after,
+          &:after
+            border-color: $color
+
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      &:hover:not([disabled])
+        + label,
+        + .label
+          &::before,
+          &:before
+            border-color: $color !important
+      &:checked
+        + label,
+        + .label
+          &::after,
+          &:after
+            border-color: $color !important
+// #endregion
+
+// #region ANIMATE
+.is-checkradio[type="radio"],
+.is-checkradio[type="checkbox"]
+  + label,
+  + .label
+    &:hover
+      &::before,
+      &:before
+        animation-duration: 0.4s
+        animation-fill-mode: both
+        animation-name: hover-color
+
+// #endregion
+
+// #region BLOCK labels
+.is-checkradio[type="checkbox"],
+.is-checkradio[type="radio"]
+  &.is-block
+    // display: none !important
+    + label,
+    + .label
+      width: 100% !important
+      border-color: $grey-lighter
+      background-color: $white-bis
+      color: findColorInvert( $white-bis )
+      padding-right: .75em
+      padding-left: 1.6em
+      &::before,
+      &:before
+        border: none !important
+      &::after,
+      &:after
+        display: inline-block
+        background-color: darken($white-bis, 7%)
+  &:hover
+    &.is-block
+      + label,
+      + .label
+        background-color: darken($white-bis, 7%)
+        &::after,
+        &:after
+          background-color: darken($white-bis, 14%)
+  &:checked
+    &.is-block
+      + label,
+      + .label
+        background-color: $grey
+        border-color: $grey
+        color: findColorInvert($grey)
+        &::after,
+        &:after
+          background-color: $white-bis !important
+
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      &:checked
+        &.is-block
+          + label,
+          + .label
+            color: $color-invert
+            border-color: $color !important
+            background: $color
+            &::after,
+            &:after
+              border-color: $color-invert !important
+              background-color: $color-invert !important
+
+// #endregion
+
+// #region SOLID radio and checkbox inputs
+.is-checkradio[type="checkbox"],
+.is-checkradio[type="radio"]
+  &.is-solid
+    + label,
+    + .label
+      &::before,
+      &:before
+        border-color: $grey-light !important
+        background-color: $grey-light !important
+      &::after,
+      &:after
+        border-color: $grey-light !important
+        background-color: $grey-light !important
+  &:checked
+    &.is-solid
+      + label,
+      + .label
+        &::after,
+        &:after
+          border-color: findColorInvert($grey-dark) !important
+          background-color: findColorInvert($grey-dark) !important
+    &:hover:not([disabled])
+      &.is-solid
+        + label,
+        + .label
+          &::before,
+          &:before
+            border-color: darken($grey-light, 14%) !important
+            background-color: darken($grey-light, 14%) !important
+  &:hover:not([disabled])
+    &.is-solid
+      + label,
+      + .label
+        &::before,
+        &:before
+          border-color: darken($grey-light, 7%) !important
+          background-color: darken($grey-light, 7%) !important
+
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      &.is-solid
+        + label,
+        + .label
+          &::before,
+          &:before
+            border-color: transparent !important
+            background-color: $color !important
+      &:checked
+        &.is-solid
+          + label,
+          + .label
+            &::before,
+            &:before
+              border-color: transparent !important
+              background-color: $color !important
+            &::after,
+            &:after
+              border-color: $color-invert !important
+              background-color: $color-invert !important
+      &:hover:not([disabled])
+        &.is-solid
+          + label,
+          + .label
+            &::before,
+            &:before
+              border: $color-invert !important
+              background-color: $color !important
+// #endregion
+
+// #region CIRCLE checkbox inputs
+.is-checkradio[type="checkbox"]
+  &.is-circle
+    + label,
+    + .label
+      &::before,
+      &:before
+        border-radius: 50%
+// #endregion
+
+// #region BORDERLESS radio and checkbox inputs
+.is-checkradio[type="radio"],
+.is-checkradio[type="checkbox"]
+  &.is-borderless
+    + label,
+    + .label
+      &::before,
+      &:before
+        border-color: transparent  !important
+        // background: yellow
+    &:hover:not([disabled])
+      + label,
+      + .label
+        &::before,
+        &:before
+          border-color: black // $checkradio-default-border
+          // background: orange !important
+
+// #endregion
+
+// #region SIZE of radio and checkbox
+=checkbox-size($size)
+  $newSize: $size * 1.5
+  $height: $newSize / 2.5
+  $width: $newSize / 4
+
+  + label,
+  + .label
+    font-size: $size
+    // line-height: $newSize
+    padding-left: $size * 2
+    &::before,
+    &:before
+      width: $newSize
+      height: $newSize
+    &::after,
+    &:after
+      width: $width
+      height: $height
+      top: ( ( $newSize / 2 ) - ( $height / 2 ) ) * 0.9
+      left: $height
+
+  &.is-block
+    + label,
+    + .label
+      &::after,
+      &:after
+        top: ( ( ( $newSize / 2 ) - ( $height / 2 ) ) * 1.3 )
+        left: $height * 1.3
+
+  &.is-rtl
+    + label,
+    + .label
+      padding-left: 0
+      padding-right: $size * 2
+      &::after,
+      &:after
+        left: auto
+        right: $height
+
+=radio-size($size)
+  $newSize: $size * 1.5
+  $height: $newSize
+  $width: $newSize
+
+  + label,
+  + .label
+    font-size: $size
+    line-height: $newSize
+    padding-left: $size * 2
+    &::before,
+    &:before,
+    &::after,
+    &:after
+      width: $width
+      height: $height
+  &.is-rtl
+    + label,
+    + .label
+      padding-right: $size * 2
+
+.is-checkradio[type="checkbox"]
+  +checkbox-size($size-normal)
+  &.is-small
+    +checkbox-size($size-small)
+  &.is-medium
+    +checkbox-size($size-medium)
+  &.is-large
+    +checkbox-size($size-large)
+
+.is-checkradio[type="radio"]
+  +radio-size($size-normal)
+  &.is-small
+    +radio-size($size-small)
+  &.is-medium
+    +radio-size($size-medium)
+  &.is-large
+    +radio-size($size-large)
+
+// #endregion

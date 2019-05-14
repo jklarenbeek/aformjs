@@ -1,0 +1,459 @@
+
+$checkradio-default-color: transparent !default
+$checkradio-default-hover: transparent !default
+$checkradio-default-border-color: $grey-lighter !default
+$checkradio-default-border-hover: $grey-light !default
+$checkradio-default-bulet-color: $grey-light !default
+$checkradio-default-bulet-hover: $grey !default
+
+$checkradio-default-top-offset: auto
+$checkradio-default-border-radius: $radius !default
+
+$checkradio-default-border: .1rem solid $checkradio-default-border-color !default
+
+$checkradio-solid-color: $grey-lighter !default
+$checkradio-solid-hover: $grey-light !default
+$checkradio-solid-border-color: transparent !default
+$checkradio-solid-border-hover: $grey-light !default
+$checkradio-solid-bulet-color: $white-ter !default
+$checkradio-solid-bulet-hover: $white-bis !default
+$checkradio-solid-background: $checkradio-default-border-color !default
+
+$checkradio-block-back-color: $white-ter !default
+
+// #region basic styling
+=bullet-size($size)
+  $newSize: $size * 1.5
+  $height: $newSize
+  $width: $newSize
+
+  + span,
+  + label
+    font-size: $size
+    line-height: $newSize
+    padding-left: $size * 2.2
+    &::before,
+    &::after
+      width: $width
+      height: $height
+  &.is-rtl,
+  .formlist.is-rtl &
+    + span,
+    + label
+      padding-right: $size * 2
+
+input.is-checkradio // default
+  display: inline-block
+  position: absolute
+  opacity: 0
+
+  + span,
+  + label
+    @extend %control
+    @extend %unselectable
+
+    // from . button
+    cursor: pointer
+    // justify-content: center
+    padding-bottom: calc(0.375em -1px)
+    padding-bottom: $button-padding-vertical
+    padding-left: $button-padding-horizontal
+    padding-right: $button-padding-horizontal
+    padding-top: $button-padding-vertical
+    text-align: center
+    white-space: nowrap
+    // end . button
+    transition: all 0.3s ease
+    &::before
+      position: absolute
+      top: auto
+      left: 0
+      margin-left: .3rem
+      content: ''
+      border: $button-border-width solid $button-border-color // $button-border-color
+      border-radius: 10%
+      background-color: $white
+      transition: all 0.3s ease
+    &::after
+      position: absolute
+      top: auto
+      left: 0
+      margin-left: .3rem
+      border: none
+      transition: all 0.3s ease
+
+  .formlist.is-vertical &
+    + span,
+    + label
+      width:100%
+
+      &:not(.button)
+        // background-color: $white-bis
+
+    &:not([disabled]):hover
+      + span,
+      + label
+
+        &:not(.button)
+          background-color: $white-bis
+
+  &:checked
+    + span,
+    + label
+      &::before
+        // border-color: $grey-light
+      &::after
+        background-color: $grey-light
+        color: $grey-light
+
+  &:not([disabled]):hover
+    + span,
+    + label
+      &::before
+        transform: scale(1.1)
+        border-color: darken($grey-lighter, 10%) // darken($grey-light, 20%)
+      &::after
+        background-color: darken($grey-lighter, 10%)
+        color: darken($grey-lighter, 10%)
+  &:not([disabled]):focus
+    + span,
+    + label
+      box-shadow: $input-focus-box-shadow-size $input-focus-box-shadow-color
+  &:not([disabled]):active
+    + span,
+    + label
+      box-shadow:  0 0 0 0.125em rgba($link, 0.5)
+      &::before
+        border-color: $grey-lighter
+        transform: scale(0.9)
+      &::after
+        background-color: $grey-light
+        color: $grey-light
+        transform: scale(0.9)
+
+  &:not([disabled]):checked:hover
+    + span,
+    + label
+        &::after
+          background-color: $grey-light
+          color: $grey-light
+
+  &:not([disabled]):checked:active
+    + span,
+    + label
+      &::after
+        // color: darken($success, 40%)
+        // transform: scale(0.9)
+
+  +bullet-size($size-normal)
+  &.is-small
+    +bullet-size($size-small)
+  &.is-medium
+    +bullet-size($size-medium)
+  &.is-large
+    +bullet-size($size-large)
+
+input.is-checkradio // colored
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &.is-#{$name}
+      &.is-borderless, .formlist.is-borderless &
+        + span.button,
+        + label.button
+          &::before
+            background-color: lighten($color, 5%)
+            border-color: lighten($color, 10%)
+      &:checked
+        + span,
+        + label
+          &::before
+            // border-color: darken($color, 90%)
+          &::after
+            background-color: $color
+            color: $color
+          &.button
+            &::after
+              background-color: darken(saturate($color, 15%), 10%)
+              color: darken(saturate($color, 15%), 10%)
+        &.is-borderless, .formlist.is-borderless &
+          + span.button,
+          + label.button
+            &::before
+              background-color: $white-bis
+              border-color: transparent
+        &.is-complement, .formlist.is-complement &
+          + span,
+          + label
+            &::after
+              background-color: get-inverted-color($color)
+              color: get-inverted-color($color)
+          + span.button,
+          + label.button
+            &::after
+              background-color: darken(saturate(get-inverted-color($color), 15%), 10%)
+              color: darken(saturate(get-inverted-color($color), 15%), 10%)
+        &.is-solid, .formlist.is-solid &
+          + span,
+          + label
+            &::before
+              background-color: lighten($color, 5%)
+              border-color: darken($color, 10%)
+            &::after
+              background-color: $white-bis // get-text-color($color)
+              color: $white-bis // get-text-color($color)
+        &.is-solid.is-complement, .formlist.is-solid.is-complement &
+          + span,
+          + label
+            &::before
+              background-color: get-inverted-color($color)
+              border-color: darken(get-inverted-color($color), 10%)
+            &::after
+              background-color: $white-bis // get-inverted-text-color($color)
+              color: $white-bis // get-inverted-text-color($color)
+      &:not([disabled]):hover
+        + span,
+        + label
+          &::before
+            border-color: $color
+        &.is-complement, .formlist.is-complement &
+          + span,
+          + label
+            &::before
+              border-color: get-inverted-color($color)
+            &::after
+              // background-color: get-inverted-color($color)
+              // color: get-inverted-color($color)
+          + span.button,
+          + label.button
+            &::after
+              background-color: darken(saturate(get-inverted-color($color), 15%), 10%)
+              color: darken(saturate(get-inverted-color($color), 15%), 10%)
+
+      &:not([disabled]):focus
+        + span,
+        + label
+          box-shadow: $input-focus-box-shadow-size lighten($color, 20%)
+        &.is-complement, .formlist.is-complement &
+          + span,
+          + label
+            box-shadow: $input-focus-box-shadow-size lighten(get-inverted-color($color), 20%)
+
+      &:not([disabled]):active
+        + span,
+        + label
+          &::before
+            border-color: $grey-lighter
+            // background-color: $color
+          &::after
+            color: $color
+          &.button
+            &::before
+              border-color: darken(saturate($color, 15%), 15%)
+
+      &:not([disabled]):checked:hover
+        + span,
+        + label
+          &::before
+            // background-color: $color
+            border-color: darken($color, 15%)
+          &::after
+            background-color: $color
+            color: $color
+        + span.button,
+        + label.button
+          &::after
+            // background-color: $white-bis
+            // color: $white-bis
+
+        &.is-complement, .formlist.is-complement &
+          + span,
+          + label
+            &::before
+              border-color: get-inverted-color($color)
+            &::after
+              background-color: get-inverted-color($color)
+              color: get-inverted-color($color)
+          + span.button,
+          + label.button
+              &::after
+                background-color: darken(saturate(get-inverted-color($color), 15%), 10%)
+                color: darken(saturate(get-inverted-color($color), 15%), 10%)
+        &.is-solid, .formlist.is-solid &
+          + span,
+          + label
+            &::before
+              background-color: $color
+              border-color: darken($color, 10%)
+            &::after
+              background-color: get-text-color($color)
+              color: get-text-color($color)
+        &.is-solid.is-complement, .formlist.is-solid.is-complement &
+          + span,
+          + label
+            &::before
+              background-color: get-inverted-color($color)
+              border-color: darken(get-inverted-color($color), 10%)
+            &::after
+              background-color: get-inverted-text-color($color)
+              color: get-inverted-text-color($color)
+
+
+      &:not([disabled]):checked:active
+        + span,
+        + label
+          &::before
+            border-color: $color
+          &::after
+            color: darken($grey-lighter, 10%)
+
+.is-checkradio[type="radio"]
+  + span,
+  + label
+    &:before
+      border-radius: 50%
+    &:after
+      content: ''
+      color: transparent
+      transform: scale(0.5)
+      background-color: $grey-lighter
+      border-radius: 50%
+
+  &:checked
+    + span,
+    + label
+      &:before
+        // box-shadow: 0px 0px 2px 2px grey-lighter
+      &:after
+        background-color: $success
+        // transform: scale(0.6) translate(-1px, -1px)
+        // box-shadow: 1px 1px 2px 2px darken($success, 40%)
+
+  &:not([disabled]):hover
+    + span,
+    + label
+      &:after
+        color: lighten($success, 10%)
+
+  &:not([disabled]):active
+    + span,
+    + label
+      &:after
+        transform: scale(0.4) translate(0,0)
+        box-shadow: none
+
+  &:not([disabled]):checked:hover
+    + span,
+    + label
+      &:after
+        color: lighten($success, 10%)
+
+  &:not([disabled]):checked:active
+    + span,
+    + label
+      &:after
+        transform: scale(0.4) translate(0,0)
+        box-shadow: none
+
+.is-checkradio[type="checkbox"]
+  + span,
+  + label
+    &::before
+      border-radius: 10%
+    &::after
+      // http://www.evotech.net/blog/2007/08/css-javascript-character-entities/
+      content: '\2714' // '\0f00c' // '\2713' // '\2022' bullet // '\01F604' happy
+      // font-family: 'Font Awesome\ 5 Free'
+      text-align: center
+      // font-weight: 900
+      // border-radius: 10%
+      background-color: transparent !important
+      color: transparent            // $button-border-color
+      text-shadow: none // 0px 0px 0px transparent
+      // transform: scale(1.0)
+      line-height: 1.45rem
+
+  &:checked
+    + span,
+    + label
+      &::after
+        // background-color: transparent
+        transform: scale(1.7) translate(0,0)
+        text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5)
+
+  &:not(&.is-borderless),
+    + span,
+    + label
+      &::after
+        background-color: $purple !important
+        color: $white !important // transparent
+
+  &:not([disabled]):hover
+    + span,
+    + label
+      &:after
+        // background-color: transparent
+
+  &:not([disabled]):active
+    + span,
+    + label
+      &:after
+        // background-color: transparent
+        text-shadow: none // 0px 0px 0px transparent
+        // text-shadow: 1px 1px 1px $grey
+
+  &:not([disabled]):checked:hover
+    + span,
+    + label
+      &::after
+        // background-color: transparent
+
+.formlist.is-circle .is-checkradio[type="checkbox"],
+.is-checkradio[type="checkbox"].is-circle
+  + span,
+  + label
+    &::before
+      border-radius: 50%
+    &::after
+      border-radius: 50%
+
+
+
+// #endregion
+
+// #region RTL, JUSTIFY, CENTER, LEFT, RIGHT
+input.is-checkradio
+  &.is-rtl,
+  .formlist.is-rtl &
+    + span,
+    + label
+      margin-right: 0rem
+      margin-left: 0rem
+      padding-left: 0
+      &::before,
+      &:before
+        left: auto
+        right: 0
+  &.is-right,
+  .formlist.is-right &
+    + span,
+    + label
+      justify-content: flex-end
+  &.is-center,
+  .formlist.is-center &
+    + span,
+    + label
+      text-align: center
+  &.is-left,
+  .formlist.is-left &
+    + span,
+    + label
+      justify-content: flex-start
+  &.is-justify,
+  .forlist.is-justify &
+    + span,
+    + label
+      text-align: justify
+// #endregion
+
+

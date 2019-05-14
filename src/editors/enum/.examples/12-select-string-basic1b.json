@@ -1,0 +1,19 @@
+{
+  "$id": "select-string-basic1b",
+  "type": "string",
+  "title": "Available currencies",
+  "description": "Only template variable $value is available.",
+  "enum": [ "₿", "$", "£", "€", "¥", "₹"],
+  "required": true,
+  "default": "₿",
+  "options": {
+    "template": "Pay in $value"
+  },
+  "layout": {
+    "leftIcon": "envelope",
+    "rightIcon": "check"
+  },
+  "errors": {
+    "required": "You MUST choose."
+  }
+}

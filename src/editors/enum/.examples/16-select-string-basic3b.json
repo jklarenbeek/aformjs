@@ -1,0 +1,27 @@
+{
+  "$id": "select-string-basic3b",
+  "type": "string",
+  "format": "color",
+  "title": "A whole lot of color to it.",
+  "description": "A simple select editor for colors.",
+  "enum": [
+    { "value": null, "title": "what the heck! no color?!"},
+    { "title": "yes, i'm disabled by default..." },
+    { "value": "#FF0000", "name": "Red", "type": "bull", "emo": "normal" },
+    { "value": "#8B0000", "name": "Dark Red", "type": "bull", "emo": "angry" },
+    { "value": "#EE9090", "name": "Light Red", "type": "bull", "emo": "happy" },
+    { "value": "#00FF00", "name": "Green", "type": "tree", "emo": "normal" },
+    { "value": "#006400", "name": "Dark Green", "type": "tree", "emo": "angry" },
+    { "value": "#90EE90", "name": "Light Green", "type": "tree", "emo": "happy", "title": "With your head in the trees." },
+    { "value": "#0000FF", "name": "Blue", "type": "fish", "emo": "normal" },
+    { "value": "#00008B", "name": "Dark Blue", "type": "fish", "emo": "angry" },
+    { "value": "#ADD8E6", "name": "Light Blue", "type": "fish", "emo": "happy" }
+  ],
+  "default": "#FF0000",
+  "nullable": true,
+  "required": true,
+  "options": {
+    "template": "$name is the color of a $emo $type.",
+    "placeholder": "You CAN choose a color!"
+  }
+}

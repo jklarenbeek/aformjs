@@ -1,0 +1,81 @@
+
+// #region base formating of formlist types
+.formlist
+  display: inline-block
+  width: auto
+  height: 100%
+  padding-left: calc(0.375em - 1px)
+  padding-right: calc(0.375em - 1px)
+  > *
+    display: inline-flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    width: auto
+    height: 100%
+
+.listgroup
+  display: block
+  border-radius: $radius
+// #endregion
+
+// #region formlist styles
+.formlist
+  &.is-rounded
+    border-radius: $radius-rounded
+    padding: 1em
+// #endregion
+
+// #region formlist headers and footers and listgroup legends
+.formlist
+  > header,
+  > .header
+    display: block
+    margin-bottom: 0.25em
+    font-weight: 500
+    background-color: $dark
+    color: $dark-invert
+  > footer,
+  > .footer
+    display: block
+    margin-bottom: 0.25em
+    background-color: $dark
+    color: $dark-invert
+    font-weight: 500
+  > .listgroup
+    > legend,
+    > .legend
+      display: block
+      margin-top: 0.25em
+      margin-bottom: 0.25em
+      border-radius: $radius
+      padding-left: 0.75em
+      padding-right: 0.75em
+      background-color: $light
+      color: $light-invert
+      font-weight: 500
+    &:first-child
+      > .legend
+        &:first-child
+          margin-top: 0.1em
+          margin-bottom: 0.25em
+// #endregion
+
+// #region everything listitems
+.formlist,
+.listgroup
+  > label,
+  > .listitem,
+  > .li
+    display: inline-flex
+    margin: 0.2rem
+    // background-color: cyan
+    > .label
+      display: block
+      margin: 0
+  &.is-vertical
+    > label,
+    > .listitem,
+    > .li
+      display: block
+// #endregion
+

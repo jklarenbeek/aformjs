@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>aformjs</title>
+    <link rel="icon" href="./_test.ico" type="image/x-icon">
+    <style>
+      :root {
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -o-text-size-adjust: none;
+        text-size-adjust: none;
+      }
+    </style>
+    <script>
+      /*
+        from: https://gist.github.com/brianblakely/3106678
+        Place this within a <script> in your <head>, prior to your stylesheet
+        Then use rems instead of px globally - your site will scale 1:1 with viewport width
+      */
+
+      function remCalibrate() {
+        // clip to a decent range size to avoid, making endless size adjustments as screens being bigger and bigger
+        const aspect_ratio =  (window.innerHeight / window.innerWidth) / 0.75;
+        const vwh =  window.innerWidth / 100;
+        const rem = Math.max(8, Math.min(24, vwh * aspect_ratio));
+
+        document.documentElement.style.fontSize =  rem + 'px';
+
+        // or
+        // document.documentElement.style.fontSize = window.innerWidth/100 + 'px';
+      }
+
+      // remCalibrate();
+      // window.addEventListener('resize', remCalibrate, false);
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>[class*="foundicon-"] { font-family: GeneralFoundicons; font-style: normal; }</style>
+    <style>
+      /* check https://github.com/Wikiki for more bulma controls */
+      fieldset {
+        display:block;
+        border:none;
+        margin:0;
+        padding:0;
+      }
+
+      .input.radiolist, .input.checklist {
+        /* display: inline-flex; */
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 4px;
+        border: 1px solid #dbdbdb;
+        color: black;
+        padding-bottom: calc(0.375em - 1px);
+        padding-left: calc(0.625em - 1px);
+        padding-right: calc(0.625em - 1px);
+        padding-top: calc(0.375em - 1px);
+        width: auto;
+        height: 100%;
+      }
+      .radiolist.buttons:last-child,
+      .checklist.buttons:last-child {
+        margin-bottom: 0;
+      }
+      .radiolist.buttons .button:last-child,
+      .checklist.buttons .button:last-child {
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .radiolist .radio,
+      .checklist .checkbox {
+        /* margin-left: 0.5em; */
+      }
+
+      .radiolist .radio.is-fullwidth,
+      .checklist .checkbox.is-fullwidth {
+        justify-content: space-between;
+      }
+
+      .radiolist .listgroup,
+      .checklist .listgroup {
+        /* width:100%; */
+      }
+
+      /*
+      .listgroup .legend {
+        display:block;
+        clear:both;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+        padding-bottom: calc(0.375em - 1px);
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        padding-top: calc(0.375em - 1px);
+        width: 100%;
+        font-size:1rem;
+        font-weight: 700;
+      }
+      .listgroup:first-child .legend:first-child {
+        margin-top: 0.25rem;
+        margin-bottom:0.5rem;
+      }
+      */
+
+      .radiolist .radio.button,
+      .checklist .checkbox.button {
+        margin-bottom: 0.25rem;
+        margin-top: 0.25rem;
+      }
+
+      .radio input[type='radio'],
+      .checkbox input[type='checkbox'] {
+        margin-right: calc(0.625em - 1px);
+        vertical-align: middle;
+      }
+
+      /* fix for has-icons */
+      .control.has-icons-left .button.is-static {
+        padding-left: 2.25em;
+      }
+      .control.has-icons-right .button.is-static {
+        padding-right: 2.25em;
+      }
+
+      .fa-stack-text {
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      .fa-is-file-text {
+        top: .5em;
+        font-size: .5em;
+        font-weight: 700;
+      }
+      .fa-is-file-icon, .fa-is-calendar-text {
+        top: .2em;
+      }
+
+    </style>
+</head>
+<body><script src="./_test.js"></script></body>
+</html>

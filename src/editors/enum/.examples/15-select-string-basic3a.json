@@ -1,0 +1,25 @@
+{
+  "$id": "select-string-basic3a",
+  "type": "string",
+  "format": "color",
+  "title": "A whole lot of color to it.",
+  "description": "A simple select editor for colors.",
+  "enum": [
+    null,
+    { "value": "#FF0000", "title": "Red" },
+    { "value": "#8B0000", "title": "Dark Red" },
+    { "value": "#EE9090", "title": "Light Red" },
+    { "value": "#00FF00", "title": "Green" },
+    { "value": "#006400", "title": "Dark Green" },
+    { "value": "#90EE90", "title": "Light Green" },
+    { "value": "#0000FF", "title": "Blue" },
+    { "value": "#00008B", "title": "Dark Blue" },
+    { "value": "#ADD8E6", "title": "Light Blue" }
+  ],
+  "default": "#FF0000",
+  "nullable": true,
+  "required": true,
+  "options": {
+    "placeholder": "You CAN choose a color."
+  }
+}

@@ -1,0 +1,73 @@
+
+// Shades
+$black:        hsl(0, 0%, 4%) !default
+$black-bis:    hsl(0, 0%, 7%) !default
+$black-ter:    hsl(0, 0%, 14%) !default
+
+$grey-darker:  hsl(0, 0%, 21%) !default
+$grey-dark:    hsl(0, 0%, 29%) !default
+$grey:         hsl(0, 0%, 48%) !default
+$grey-light:   hsl(0, 0%, 71%) !default
+$grey-lighter: hsl(0, 0%, 86%) !default
+
+$white-ter:    hsl(0, 0%, 96%) !default
+$white-bis:    hsl(0, 0%, 98%) !default
+$white:        hsl(0, 0%, 100%) !default
+
+// material palette all base 500 colors
+$red: #F44336 !default
+$pink: #E91E63 !default
+$purple: #9C27B0 !default
+$deep-purple: #673AB7 !default
+$indigo: #3F51B5 !default
+$blue: #2196F3 !default
+$light-blue: #03A9F4 !default
+$cyan: #00BCD4 !default
+$teal: #009688 !default
+$turquoise: #1abc9c !default // not material
+$green: #4CAF50 !default
+$light-green: #8BC34A !default
+$emerald: #2ecc71 !default // not material
+$lime: #CDDC39 !default
+$yellow: #FFEB3B !default
+$amber: #FFC107 !default
+$orange: #FF9800 !default
+$deep-orange: #FF5722 !default
+$brown: #795548 !default
+$grey: #9E9E9E !default
+$blue-grey: #607D8B !default
+
+// Color wheel applied
+// $red: 	 hsl(355, 100%, 50%)
+// $orange: hsl(20, 100%, 50%)
+// $yellow: hsl(60, 100%, 50%)
+// $green:  hsl(120, 100%, 50%)
+// $cyan:   hsl(180, 100%, 50%)
+// $blue:   hsl(240, 100%, 50%)
+// $violet: hsl(300, 100%, 50%)
+
+
+:root
+	--sim-color: $orange
+	--sim-contrast: $white
+
+	--bis-color: $pink
+	--bis-contrast: $white
+
+	$ter: harmonize($orange, $pink, 8%, 16%)
+	--ter-color: $ter
+	--ter-contrast: findInvertColor($ter)
+
+	--sim-dark: darken($orange, 10%)
+	--sim-light: lighten($orange, 10%)
+
+	--bis-color: pink // complement of sim
+
+	--back-color: white
+	--text-color: black
+
+	--input-bg-color: white
+	--input-fg-color: black
+	--input-focus-color: lightblue
+
+	--bullet-bg-color: white

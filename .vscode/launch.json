@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+          "type": "chrome",
+          "request": "launch",
+          "name": "aformjs",
+          "url": "http://localhost:1234",
+          "trace": true,
+          "webRoot": "${workspaceFolder}/dist",
+          "breakOnLoad": true,
+          "sourceMapPathOverrides": {
+            "./src/*": "${webRoot}/*"
+          }
+      },
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "components",
+        "url": "http://localhost:1234/_test.html",
+        "trace": true,
+        "webRoot": "${workspaceFolder}/dist",
+        "breakOnLoad": true,
+        "sourceMapPathOverrides": {
+          "./src/*": "${webRoot}/*"
+        }
+    },
+  ]
+}
