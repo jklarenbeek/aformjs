@@ -3,7 +3,7 @@
 /* eslint-disable quote-props */
 /* eslint-disable no-unused-vars */
 /** @jsx h */
-import 'bulma/css/bulma.css';
+import './sass/bulma.sass';
 
 
 import { h, app } from 'futilsjs';

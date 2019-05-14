@@ -1,3 +1,6 @@
+@import 'bulmacore/utilities/functions'
+@import 'lumen/_introspection'
+@import 'lumen/_harmony'
 
 // Shades
 $black:        hsl(0, 0%, 4%) !default
@@ -47,27 +50,27 @@ $blue-grey: #607D8B !default
 // $violet: hsl(300, 100%, 50%)
 
 
-:root
-	--sim-color: $orange
-	--sim-contrast: $white
+// \:root
+//   --sim-color: $orange
+//   --sim-contrast: $white
 
-	--bis-color: $pink
-	--bis-contrast: $white
+//   --bis-color: $pink
+//   --bis-contrast: $white
 
-	$ter: harmonize($orange, $pink, 8%, 16%)
-	--ter-color: $ter
-	--ter-contrast: findInvertColor($ter)
+//   $ter: harmonize($orange, $pink, 8%, 16%)
+//   --ter-color: $ter
+//   --ter-contrast: findColorInvert($ter)
 
-	--sim-dark: darken($orange, 10%)
-	--sim-light: lighten($orange, 10%)
+//   --sim-dark: darken($orange, 10%)
+//   --sim-light: lighten($orange, 10%)
 
-	--bis-color: pink // complement of sim
+//   --bis-color: pink // complement of sim
 
-	--back-color: white
-	--text-color: black
+//   --back-color: white
+//   --text-color: black
 
-	--input-bg-color: white
-	--input-fg-color: black
-	--input-focus-color: lightblue
+//   --input-bg-color: white
+//   --input-fg-color: black
+//   --input-focus-color: lightblue
 
-	--bullet-bg-color: white
+//   --bullet-bg-color: white

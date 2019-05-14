@@ -6,6 +6,7 @@
   "scripts": {
     "start:data": "xcopy data\\*.json dist\\ /Y",
     "start:parcel": "parcel ./src/index.html",
+    "start:rollup": "rollup -c",
     "start:components": "parcel ./src/components/_test.html",
     "start": "npm run start:components",
     "watch": "parcel watch ./src/index.html"
@@ -60,6 +61,7 @@
     "@babel/preset-env": "^7.4.4",
     "autoprefixer": "^9.5.1",
     "babel-eslint": "^10.0.1",
+    "cssnano": "^4.1.10",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-compat": "^2.6.3",
@@ -71,12 +73,10 @@
     "postcss-preset-env": "^6.6.0",
     "sass": "^1.20.1"
   },
-  "dependencies": {
-    "futilsjs": "^1.0.0"
-  },
+  "dependencies": {},
   "sideEffects": false,
   "postcss": {
-    "modules": true,
+    "modules": false,
     "plugins": {
       "postcss-normalize": {},
       "postcss-preset-env": {},
@@ -119,7 +119,6 @@
     "_lib/*",
     "_doc/*"
   ],
-  "$comment": "dude, ... dont ask me, I dont understand this stuff.",
   "eslintConfig": {
     "root": true,
     "parser": "babel-eslint",

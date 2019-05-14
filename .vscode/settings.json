@@ -1,6 +1,5 @@
 {
   "files.eol": "\n",
-  "tslint.enable": false,
 
   "editor.showFoldingControls": "always",
 
@@ -15,7 +14,7 @@
   // When opening a file, `editor.tabSize` and `editor.insertSpaces`
   // will be detected based on the file contents. Set to false to keep
   // the values you've explicitly set, above.
-  "editor.detectIndentation": false,
+  "editor.detectIndentation": true,
 
   // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
 
