@@ -4,7 +4,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable object-curly-newline */
 /* @jsx h */
-import { h, int_random } from 'futilsjs';
+import { h, int32_random as int_random } from 'futilsjs';
 
 import {
   parseColorModifier,

@@ -1,5 +1,5 @@
 import {
-  PRIMITIVES,
+  isPrimitiveTypeEx,
   sanitizePrimitiveValue,
   checkIfValueDisabled,
   isPureObject,
@@ -29,7 +29,7 @@ export function parseEnumArray(schema) {
       // by all of the else/if statements below.
       for (let i = 0; i < enums.length; i++) {
         const row = enums[i];
-        const label = PRIMITIVES.includes(typeof row[0])
+        const label = isPrimitiveTypeEx(typeof row[0])
           ? row[0]
           : null;
         const items = row[1].constructor === Array
@@ -48,7 +48,7 @@ export function parseEnumArray(schema) {
     }
 
     // normalize array of primitive types only?
-    if (!firstenum || PRIMITIVES.includes(typeof firstenum)) {
+    if (!firstenum || isPrimitiveTypeEx(typeof firstenum)) {
       // 31-select-string-basic1
       const titles = (template.constructor === Array)
         ? template
