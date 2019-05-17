@@ -2,15 +2,17 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable import/prefer-default-export */
 /* @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 
-import { CheckList, CheckItem } from './CheckList';
 import { Control } from './_Control';
+import { InputItem } from './List/ListControl';
+import { CheckList } from './CheckList';
 
 export function CheckBox({ $id, $name, key, selected = [], label, readOnly, disabled, onchange, onfocus, onblur, config = CheckList.config }) {
   return (<Control $id={ $id } layout={ {} } config={ config }>
-    <CheckItem
+    <InputItem
       $name={ $name }
+      type={ config.inputItemType }
       key={ key }
       selected={ selected }
       label={ label }

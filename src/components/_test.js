@@ -3,7 +3,7 @@
 /* @jsx h */
 import 'aformjs/sass/bulma';
 
-import { h, app } from 'futilsjs';
+import { h, app } from '__futilsjs';
 
 import { Field } from './form/Field';
 

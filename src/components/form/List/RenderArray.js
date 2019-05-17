@@ -1,5 +1,5 @@
 /* @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 
 /* eslint-disable object-curly-newline */
 import { ListControl } from './ListControl';

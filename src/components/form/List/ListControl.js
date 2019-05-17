@@ -4,7 +4,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable object-curly-newline */
 /* @jsx h */
-import { h, int32_random as int_random } from 'futilsjs';
+import { h, int32_random as int_random } from '__futilsjs';
 
 import {
   parseColorModifier,
@@ -14,7 +14,7 @@ import {
 } from 'aformjs/components/modifiers';
 
 import { Control } from '../_Control';
-import { getDefaultRenderer } from './index';
+
 import { colorModifier, sizeModifier, styleModifier } from '../../modifiers';
 
 const configListControl = {
@@ -47,7 +47,7 @@ const configListControl = {
   inputItemClass: 'is-checkradio',
   contentItemClass: undefined, // 'button',
 
-  renderer: getDefaultRenderer(),
+  renderer: null,
 };
 
 export const listModifier = {
@@ -183,7 +183,14 @@ export function ListGroup({ schema = {}, layout = {}, optionLayout = {}, groups 
     </div>);
 }
 
-export function ListControlEx({ $id, schema = {}, layout = {}, optionLayout = {}, groups, groupLayout = {}, iconLeft, iconRight, disabled, onclick, onfocus, onblur, config = configListControl }, children) {
+export function ListControlEx({
+  $id, schema = {}, layout = {},
+  optionLayout = {},
+  groups, groupLayout = {},
+  iconLeft, iconRight,
+  disabled,
+  onclick, onfocus, onblur,
+  config = configListControl }, children) {
   return (<Control layout={ layout } iconLeft={ iconLeft } iconRight={ iconRight } config={ config }>
     <fieldset
       id={ $id }
@@ -212,22 +219,15 @@ export function ListControlEx({ $id, schema = {}, layout = {}, optionLayout = {}
 
 export function ListControl(
   {
-    $id,
-    $name,
-    schema = {},
-    layout,
-    options,
-    optionLayout,
-    groups,
-    groupLayout,
+    $id, $name, schema = {}, layout,
+    options, optionLayout,
+    groups, groupLayout,
     selected,
-    iconLeft,
-    iconRight,
+    iconLeft, iconRight,
     disabled,
-    onchange,
-    onfocus,
-    onblur,
-    config = configListControl }) {
+    onchange, onfocus, onblur,
+    config = configListControl,
+  }) {
 
   const RenderOptions = config.renderer;
   const name = $name || Symbol(int_random()).toString();
@@ -262,6 +262,7 @@ export function ListControl(
       </RenderOptions>
     </ListControlEx>);
 }
+
 ListControl.config = configListControl;
 ListControl.colors = colorModifier;
 ListControl.sizes = sizeModifier;

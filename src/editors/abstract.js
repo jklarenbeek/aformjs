@@ -1,4 +1,4 @@
-import { isPureObject } from 'futilsjs';
+import { isPureObject } from '__futilsjs';
 
 export default class AbstractEditor {
   constructor(form, schema, path) {

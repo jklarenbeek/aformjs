@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable object-curly-newline */
 /* @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 
 import { Message } from 'aformjs/bulma-default';
 import { ListControl } from './ListControl';

@@ -2,7 +2,7 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable import/prefer-default-export */
 /* @jsx h */
-import { h, h as render } from 'futilsjs';
+import { h, h as render } from '__futilsjs';
 
 import { parseSizeModifier, alignModifier, stateModifier } from 'aformjs/components/modifiers';
 import { IconBox, Icon } from 'aformjs/components/elements/Icon';

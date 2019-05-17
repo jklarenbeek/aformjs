@@ -1,5 +1,5 @@
 /* eslint-disable radix */
-import { isPureObject } from 'futilsjs';
+import { isPureObject } from '__futilsjs';
 import AbstractEditor from 'aformjs/editors/abstract.js';
 
 export default class ObjectEditor extends AbstractEditor {

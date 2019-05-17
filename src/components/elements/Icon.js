@@ -9,8 +9,8 @@
 // https://orioniconlibrary.com/
 
 
-import { h } from 'futilsjs';
-import { collapseToString, collapseCssClass, removeCssClass } from 'futilsjs';
+import { h } from '__futilsjs';
+// import { collapseToString, collapseCssClass, removeCssClass } from '__futilsjs';
 
 import { parseModifier, helperModifier, parseAlignModifier, parseSizeModifier, textModifier, parseTextModifier } from '../modifiers';
 

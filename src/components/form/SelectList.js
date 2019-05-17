@@ -3,7 +3,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable object-curly-newline */
 /* @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 
 import {
   parseColorModifier,

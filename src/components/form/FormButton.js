@@ -1,7 +1,7 @@
 /* eslint-disable padded-blocks */
 /* eslint-disable object-curly-newline */
 /* @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 
 import {
   parseColorModifier,

@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 import { Control } from 'aformjs/core/components';
 
 import NumberEditor from '../editor';

@@ -3,7 +3,7 @@ import {
   sanitizePrimitiveValue,
   checkIfValueDisabled,
   isPureObject,
-} from 'futilsjs';
+} from '__futilsjs';
 
 export function parseEnumArray(schema) {
   const enums = schema.enum;

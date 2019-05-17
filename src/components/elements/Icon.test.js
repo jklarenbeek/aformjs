@@ -2,7 +2,7 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable no-unused-vars */
 /* @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 
 import { Icon, IconStack, IconText } from './Icon';
 

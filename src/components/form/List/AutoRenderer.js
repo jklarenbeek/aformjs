@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import { getFirstObjectItem } from 'futilsjs';
+import { getFirstObjectItem } from '__futilsjs';
 
 import RenderArray from './RenderArray';
 import RenderTuple from './RenderTuple';
@@ -29,7 +29,8 @@ export default function AutoRenderer({ $name, schema, layout, options, optionLay
       }
     }
     else if (options instanceof Map) {
-      throw new Error('NOT IMPLEMENTED!! Actually it is but,....a todootje.');
+      // TODO: implement map type.
+      throw new Error('ERROR: NOT IMPLEMENTED!');
     }
     else { // options object
       const k = getFirstObjectItem(options);

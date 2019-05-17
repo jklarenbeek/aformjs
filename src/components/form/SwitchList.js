@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 /* @jsx h */
-import { h } from 'futilsjs';
+import { h } from '__futilsjs';
 
 import { ListControl } from './List/index';
 

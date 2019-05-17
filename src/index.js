@@ -6,7 +6,7 @@
 import './sass/bulma.sass';
 
 
-import { h, app } from 'futilsjs';
+import { h, app } from '__futilsjs';
 
 const schema = {
   '$id': 'select-string-basic',
