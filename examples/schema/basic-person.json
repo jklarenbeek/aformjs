@@ -1,6 +1,7 @@
 {
   "title": "Person",
   "type": "object",
+  "id": "person",
   "properties": {
     "name": {
       "type": "string",
@@ -17,5 +18,5 @@
       "type": "string",
       "enum": ["female", "male"]
     }
-  }  
+  }
 }
