@@ -20,7 +20,7 @@ import { IconBox, Icon } from 'aformjs/components/elements/Icon';
 
 import { Control, resolveControlIconSize } from './_Control';
 
-import { ListControl, ListGroup, resolveCommonItemProperties } from './List/index';
+import { ListControl, ListGroup, resolveCommonItemProperties } from './List';
 import { helperModifier } from '../modifiers';
 
 

@@ -5,4 +5,5 @@ import AutoRenderer from './AutoRenderer';
 
 ListControl.config.renderer = AutoRenderer;
 
-export { ListControl, ListGroup, InputItem } from './ListControl';
+export * from './ListControl';
+export default ListControl;

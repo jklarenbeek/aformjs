@@ -2,12 +2,12 @@
   "name": "aformjs",
   "version": "1.0.0",
   "description": "aformjs is a fast json-schema form generator utilising a fork of hyperapp and futilsjs.",
-  "main": "./src/index.js",
+  "module": "./dist/test.js",
   "scripts": {
     "start:data": "xcopy data\\*.json dist\\ /Y",
     "start:parcel": "parcel ./src/index.html",
     "start:rollup": "rollup -c",
-    "start:components": "parcel ./src/components/_test.html",
+    "start:components": "parcel ./src/components/test.html",
     "start": "npm run start:components",
     "watch": "parcel watch ./src/index.html"
   },
@@ -118,7 +118,8 @@
     "dist/*",
     "_old/*",
     "_lib/*",
-    "_doc/*"
+    "_doc/*",
+    "src/__futilsjs"
   ],
   "eslintConfig": {
     "root": true,
