@@ -2,7 +2,7 @@
 import { h } from 'futilsjs';
 
 /* eslint-disable object-curly-newline */
-import { ListControl } from './index';
+import { ListControl } from './ListControl';
 
 /**
  * @param {!object} props

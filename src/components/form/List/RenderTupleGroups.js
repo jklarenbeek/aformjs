@@ -3,7 +3,7 @@
 /* @jsx h */
 import { h } from 'futilsjs';
 
-import { ListControl } from './index';
+import { ListControl } from './ListControl';
 import RenderArray from './RenderArray';
 import RenderObject from './RenderObject';
 

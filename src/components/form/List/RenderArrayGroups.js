@@ -2,7 +2,7 @@
 /* @jsx h */
 import { h } from 'futilsjs';
 
-import { ListControl } from './index';
+import { ListControl } from './ListControl';
 
 /**
  * Essentially the same as ListArray but then grouped by column.

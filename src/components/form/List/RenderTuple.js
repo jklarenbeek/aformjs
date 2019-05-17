@@ -3,7 +3,7 @@
 /* @jsx h */
 import { h } from 'futilsjs';
 
-import { ListControl } from './index';
+import { ListControl } from './ListControl';
 
 /**
  * @param {!object} props

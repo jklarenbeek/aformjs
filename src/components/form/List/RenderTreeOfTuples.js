@@ -4,7 +4,7 @@
 import { h } from 'futilsjs';
 
 import { Message } from 'aformjs/bulma-default';
-import { ListControl } from './index';
+import { ListControl } from './ListControl';
 
 /**
  *
