@@ -1,0 +1,7 @@
+{
+  "type": "bool",
+  "format": "checkbox",
+  "title": "CheckBox (Default)",
+  "description": "This is a very simple boolean as a CheckBox Class",
+  "maxLength": 246
+}

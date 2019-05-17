@@ -171,7 +171,7 @@ const tuplePlantGroups3 = [
 ];
 const tuplePlantGroups3Selected = 'marchantiophyta';
 
-export const testData = {
+export default {
   arraySizes,
   arrayColors,
   arrayUnits,

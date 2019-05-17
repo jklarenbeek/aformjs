@@ -15,7 +15,7 @@ import { CheckList } from './CheckList';
 import { Field } from './Field';
 import { HelpDanger } from './Help';
 
-import { testData } from './List/index.testdata.js';
+import testData from './List/data.test.js';
 
 //
 

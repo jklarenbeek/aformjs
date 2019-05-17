@@ -16,7 +16,7 @@ import { MultiList } from './MultiList';
 import { Field } from './Field';
 import { HelpDanger } from './Help';
 
-import { testData } from './List/index.testdata';
+import testData from './List/data.test';
 
 const a = (state, action) => {
   const r = (<form class='container'>

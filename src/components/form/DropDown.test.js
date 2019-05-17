@@ -15,7 +15,7 @@ import { DropDown } from './DropDown';
 import { Field } from './Field';
 import { HelpDanger } from './Help';
 
-import { testData } from './List/index.testdata';
+import testData from './List/data.test';
 import { Icon } from '../elements/Icon';
 
 //

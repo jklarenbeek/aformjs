@@ -18,7 +18,7 @@ import { SwitchList } from './SwitchList';
 
 import { Field, HorizontalField } from './Field';
 
-import { testData } from './List/index.testdata';
+import testData from './List/data.test';
 import { ListControl } from './List';
 
 //
