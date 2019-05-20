@@ -2,6 +2,8 @@
 
 aformjs is a fast json-schema form generator using a fork of hyperapp within futilsjs. This is underheavy construction for the moment, so don't expect much of it.
 
+https://www.youtube.com/watch?v=jo699fAKGnA
+
 ## # build instructions on windows
 
 To build aformjs you need to get a local copy of futilsjs first.
