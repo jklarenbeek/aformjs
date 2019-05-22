@@ -1,9 +1,17 @@
 import {
   isPrimitiveTypeEx,
+  isPrimitiveType,
   sanitizePrimitiveValue,
-  checkIfValueDisabled,
   isPureObject,
 } from '__futilsjs';
+
+
+export function checkIfValueDisabled(value, nullable, disabled) {
+  if (disabled) return true;
+  if (value === undefined) return true;
+  if (nullable && value === null) return false;
+  return !isPrimitiveType(value);
+}
 
 export function parseEnumArray(schema) {
   const enums = schema.enum;
