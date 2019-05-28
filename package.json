@@ -6,6 +6,7 @@
   "scripts": {
     "start:dist": "xcopy examples\\schema\\*.json dist\\ /Y",
     "start:components": "parcel ./test/components/index.html",
+    "start:json": "parcel ./test/json/index.html",
     "start": "npm run start:components"
   },
   "author": "jklarenbeek@gmail.com",
@@ -31,7 +32,8 @@
   ],
   "alias": {
     "aformjs": "./src",
-    "__futilsjs": "./src/__futilsjs"
+    "__futilsjs": "./src/__futilsjs",
+    "examples": "./examples"
   },
   "engines": {
     "node": ">= 10.12.0",
