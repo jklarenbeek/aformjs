@@ -20,7 +20,7 @@
         "type": "chrome",
         "request": "launch",
         "name": "components",
-        "url": "http://localhost:1234/_test.html",
+        "url": "http://localhost:1234/index.html",
         "trace": true,
         "webRoot": "${workspaceFolder}/dist",
         "breakOnLoad": true,

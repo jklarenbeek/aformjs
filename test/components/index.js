@@ -5,19 +5,19 @@ import 'aformjs/sass/bulma';
 
 import { h, app } from '__futilsjs';
 
-import { Field } from './form/Field';
+import { Field } from 'aformjs/components/form/Field';
 
-import NormalFieldTest from './form/Field.Normal.test';
-import HorizontalFieldTest from './form/Field.Horizontal.test';
+import NormalFieldTest from './Field.Normal';
+import HorizontalFieldTest from './Field.Horizontal';
 
-import InputStringTest from './form/InputString.test';
-import InputNumberTest from './form/InputNumber.test';
+import InputStringTest from './InputString';
+import InputNumberTest from './InputNumber';
 
-import SelectListTest from './form/SelectList.test';
-import MultiListTest from './form/MultiList.test';
-import RadioListTest from './form/RadioList.test';
-import CheckListTest from './form/CheckList.test';
-import DropDownTest from './form/DropDown.test';
+import SelectListTest from './SelectList';
+import MultiListTest from './MultiList';
+import RadioListTest from './RadioList';
+import CheckListTest from './CheckList';
+import DropDownTest from './DropDown';
 
 // **********************************************************************************
 

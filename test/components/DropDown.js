@@ -10,13 +10,14 @@ import {
   sizeModifier,
 } from 'aformjs/components/modifiers';
 
-import { DropDown } from './DropDown';
+import { Icon } from 'aformjs/components/elements/Icon';
 
-import { Field } from './Field';
-import { HelpDanger } from './Help';
+import { DropDown } from 'aformjs/components/form/DropDown';
 
-import testData from './List/data.test';
-import { Icon } from '../elements/Icon';
+import { Field } from 'aformjs/components/form/Field';
+import { HelpDanger } from 'aformjs/components/form/Help';
+
+import testData from './ListControl.data';
 
 //
 

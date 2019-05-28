@@ -12,23 +12,23 @@ import {
 import { Icon } from 'aformjs/components/elements/Icon';
 
 
-import { NormalField } from './Field';
+import { NormalField } from 'aformjs/components/form/Field';
 
-import { GroupedField } from './GroupedField';
+import { GroupedField } from 'aformjs/components/form/GroupedField';
 
-import { InputString } from './InputString';
-import { InputArea } from './InputArea';
+import { InputString } from 'aformjs/components/form/InputString';
+import { InputArea } from 'aformjs/components/form/InputArea';
 
-import { SelectList } from './SelectList';
-import { RadioList } from './RadioList';
-import { CheckBox } from './CheckBox';
+import { SelectList } from 'aformjs/components/form/SelectList';
+import { RadioList } from 'aformjs/components/form/RadioList';
+import { CheckBox } from 'aformjs/components/form/CheckBox';
 
-import RenderObject from './List/RenderObject';
-import RenderArray from './List/RenderArray';
+import RenderObject from 'aformjs/components/form/List/RenderObject';
+import RenderArray from 'aformjs/components/form/List/RenderArray';
 
-import { Help, HelpDanger } from './Help';
+import { Help, HelpDanger } from 'aformjs/components/form/Help';
 
-import { ResetButton, SubmitButton } from './FormButton';
+import { ResetButton, SubmitButton } from 'aformjs/components/form/FormButton';
 
 
 export default (state, action) => (

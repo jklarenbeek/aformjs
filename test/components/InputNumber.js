@@ -9,9 +9,9 @@ import {
   sizeModifier,
 } from 'aformjs/components/modifiers';
 
-import { InputNumber } from './InputNumber';
+import { InputNumber } from 'aformjs/components/form/InputNumber';
 
-import { Field } from './Field';
+import { Field } from 'aformjs/components/form/Field';
 
 export default (state, action) => {
   return (<form class='container'>

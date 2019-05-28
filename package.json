@@ -2,14 +2,11 @@
   "name": "aformjs",
   "version": "1.0.0",
   "description": "aformjs is a fast json-schema form generator utilising a fork of hyperapp and futilsjs.",
-  "module": "./dist/test.js",
+  "module": "./dist/index.js",
   "scripts": {
     "start:dist": "xcopy examples\\schema\\*.json dist\\ /Y",
-    "start:parcel": "parcel ./src/index.html",
-    "start:rollup": "rollup -c",
-    "start:components": "parcel ./src/components/test.html",
-    "start": "npm run start:components",
-    "watch": "parcel watch ./src/index.html"
+    "start:components": "parcel ./test/components/index.html",
+    "start": "npm run start:components"
   },
   "author": "jklarenbeek@gmail.com",
   "license": "MIT",
@@ -30,7 +27,7 @@
   ],
   "files": [
     "src/",
-    "_lib/"
+    "test/components/"
   ],
   "alias": {
     "aformjs": "./src",
@@ -56,20 +53,11 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.5.1",
-    "babel-eslint": "^10.0.1",
-    "cssnano": "^4.1.10",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-compat": "^2.6.3",
-    "eslint-plugin-html": "^4.0.6",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-react": "^7.11.1",
-    "postcss-modules": "^1.4.1",
     "postcss-normalize": "^7.0.1",
     "postcss-preset-env": "^6.6.0",
     "sass": "^1.20.1"

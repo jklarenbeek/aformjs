@@ -12,14 +12,13 @@ import {
   sizeModifier,
 } from 'aformjs/components/modifiers';
 
-import { RadioList } from './RadioList';
-import { CheckList } from './CheckList';
-import { SwitchList } from './SwitchList';
+import { RadioList } from 'aformjs/components/form/RadioList';
+import { CheckList } from 'aformjs/components/form/CheckList';
+import { SwitchList } from 'aformjs/components/form/SwitchList';
 
-import { Field, HorizontalField } from './Field';
+import { Field, HorizontalField } from 'aformjs/components/form/Field';
 
-import testData from './List/data.test';
-import { ListControl } from './List';
+import testData from './ListControl.data';
 
 //
 

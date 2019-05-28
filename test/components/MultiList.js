@@ -11,12 +11,12 @@ import {
   sizeModifier,
 } from 'aformjs/components/modifiers';
 
-import { MultiList } from './MultiList';
+import { MultiList } from 'aformjs/components/form/MultiList';
 
-import { Field } from './Field';
-import { HelpDanger } from './Help';
+import { Field } from 'aformjs/components/form/Field';
+import { HelpDanger } from 'aformjs/components/form/Help';
 
-import testData from './List/data.test';
+import testData from './ListControl.data';
 
 const a = (state, action) => {
   const r = (<form class='container'>

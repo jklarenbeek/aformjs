@@ -12,11 +12,11 @@ import {
   sizeModifier,
 } from 'aformjs/components/modifiers';
 
-import { SelectList } from './SelectList';
-import { Field } from './Field';
-import { HelpDanger } from './Help';
+import { SelectList } from 'aformjs/components/form/SelectList';
+import { Field } from 'aformjs/components/form/Field';
+import { HelpDanger } from 'aformjs/components/form/Help';
 
-import testData from './List/data.test';
+import testData from './ListControl.data';
 
 export default (state, action) => {
   return (<form class='container'>

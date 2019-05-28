@@ -10,12 +10,12 @@ import {
   sizeModifier,
 } from 'aformjs/components/modifiers';
 
-import { CheckList } from './CheckList';
+import { CheckList } from 'aformjs/components/form/CheckList';
 
-import { Field } from './Field';
-import { HelpDanger } from './Help';
+import { Field } from 'aformjs/components/form/Field';
+import { HelpDanger } from 'aformjs/components/form/Help';
 
-import testData from './List/data.test.js';
+import testData from './ListControl.data';
 
 //
 

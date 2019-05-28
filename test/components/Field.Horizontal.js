@@ -10,29 +10,29 @@ import {
   backModifier,
   stateModifier,
   sizeModifier,
+  styleModifier,
 } from 'aformjs/components/modifiers';
 
 import { Icon } from 'aformjs/components/elements/Icon';
 
 
-import { Field, HorizontalField } from './Field';
+import { Field, HorizontalField } from 'aformjs/components/form/Field';
 
-import { AddonField, StaticAddon } from './AddonField';
+import { AddonField, StaticAddon } from 'aformjs/components/form/AddonField';
 
-import { InputString } from './InputString';
-import { InputArea } from './InputArea';
+import { InputString } from 'aformjs/components/form/InputString';
+import { InputArea } from 'aformjs/components/form/InputArea';
 
-import { SelectList } from './SelectList';
-import { RadioList } from './RadioList';
-import { CheckBox } from './CheckBox';
+import { SelectList } from 'aformjs/components/form/SelectList';
+import { RadioList } from 'aformjs/components/form/RadioList';
+import { CheckBox } from 'aformjs/components/form/CheckBox';
 
-import RenderObject from './List/RenderObject';
-import RenderArray from './List/RenderArray';
+import RenderObject from 'aformjs/components/form/List/RenderObject';
+import RenderArray from 'aformjs/components/form/List/RenderArray';
 
-import { Help, HelpDanger } from './Help';
+import { Help, HelpDanger } from 'aformjs/components/form/Help';
 
-import { FormButton } from './FormButton';
-import { styleModifier } from '../modifiers';
+import { FormButton } from 'aformjs/components/form/FormButton';
 
 
 export default (state, action) => (
